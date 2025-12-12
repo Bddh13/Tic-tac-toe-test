@@ -1,6 +1,7 @@
 # Telegram Mini App: Крестики-нолики (Tic-Tac-Toe)
 
 Demo: https://tma-tictactoe-bertyrocket.amvera.io/
+Demo Telegram: https://t.me/testertosterplay_bot
 Repo: https://github.com//Bddh13/Tic-tac-toe-tes/
 
 Небольшая игра «Крестики-нолики» в формате Telegram Mini App: игрок играет против компьютера.  
