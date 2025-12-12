@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Крестики-нолики</title>
+
+  <!-- Telegram WebApp SDK (обязательная штука для Mini Apps) -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!-- :contentReference[oaicite:1]{index=1} -->
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <section class="card panel">
+      <div class="header">
+        <div>
+          <h1 class="title">Крестики-нолики 🌸</h1>
+          <p class="subtitle">Побеждаешь, получаешь промокод на скидку.</p>
+        </div>
+        <div class="badge" id="turnBadge">Твой ход: X</div>
+      </div>
+
+      <div class="board" id="board" aria-label="Игровое поле 3x3"></div>
+
+      <div class="divider"></div>
+
+      <p class="hint" id="statusText">Ты играешь <b>X</b>. Компьютер играет <b>O</b>.</p>
+      <div class="toast" id="toast"></div>
+    </section>
+
+    <aside class="card side">
+      <div class="stat">
+        <div class="pill"><b>Победы</b><span id="wins">0</span></div>
+        <div class="pill"><b>Поражения</b><span id="losses">0</span></div>
+        <div class="pill"><b>Ничьи</b><span id="draws">0</span></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn primary" id="btnNew">Новая игра ✨</button>
+        <button class="btn ghost" id="btnReset">Сбросить счёт</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="hint">
+        В Telegram придёт:
+        <br/>• Победа: <b>«Победа! Промокод выдан: 12345»</b>
+        <br/>• Проигрыш: <b>«Проигрыш»</b>
+      </p>
+    </aside>
+  </div>
+
+  <!-- Modal -->
+  <div class="modalWrap" id="modalWrap" role="dialog" aria-modal="true">
+    <div class="modal">
+      <h2 id="modalTitle">Заголовок</h2>
+      <p id="modalText">Текст</p>
+
+      <div class="codeBox" id="codeBox" style="display:none;">
+        <div class="code" id="promoCode">00000</div>
+        <button class="btn ghost" id="btnCopy">Скопировать</button>
+      </div>
+
+      <div class="controls">
+        <button class="btn primary" id="btnPlayAgain">Сыграть ещё раз</button>
+        <button class="btn ghost" id="btnClose">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

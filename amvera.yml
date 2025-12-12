@@ -1,0 +1,12 @@
+version: null
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: "18"
+build:
+  skip: false
+run:
+  command: npm start
+  containerPort: 3000
+serviceType: compute
